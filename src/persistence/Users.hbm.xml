@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 sept. 2016 14:21:11 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="persistence.Users" table="users" catalog="mabase">
+        <composite-id name="id" class="persistence.UsersId">
+            <key-property name="username" type="string">
+                <column name="username" />
+            </key-property>
+            <key-property name="passeword" type="string">
+                <column name="passeword" />
+            </key-property>
+        </composite-id>
+        <property name="role" type="string">
+            <column name="role" />
+        </property>
+    </class>
+</hibernate-mapping>
